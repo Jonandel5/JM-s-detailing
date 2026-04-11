@@ -1,15 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>JM's Mobile Detailing</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>JM's Detailing - Mobile Auto Detailing Orlando</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#080808!important;color:#efefef;font-family:Arial,sans-serif;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0.8rem 1.5rem;background:#080808;border-bottom:1px solid #222}
+.logo{color:#f0b429;font-size:1.5rem;font-weight:900;text-decoration:none;font-family:Impact,Arial,sans-serif;letter-spacing:2px}
+.logo span{color:#fff}
+.nav-phone{color:#f0b429;text-decoration:none;border:1px solid #f0b429;padding:0.4rem 0.9rem;font-weight:700;font-size:0.9rem;border-radius:2px}
+.hero{min-height:100vh;background:#080808;display:flex;align-items:center;padding:6rem 1.5rem 4rem}
+.badge{display:inline-block;background:rgba(240,180,41,0.1);border:1px solid rgba(240,180,41,0.3);color:#f0b429;padding:0.3rem 0.8rem;font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:1.2rem;border-radius:2px}
+h1{font-family:Impact,Arial,sans-serif;font-size:clamp(3rem,10vw,6rem);line-height:0.95;color:#fff;margin-bottom:1rem}
+h1 span{color:#f0b429}
+.sub{font-size:1rem;color:#888;line-height:1.6;max-width:440px;margin-bottom:0.6rem}
+.loc{font-size:0.82rem;color:#c8861a;margin-bottom:2rem}
+.btn{display:inline-block;background:linear-gradient(135deg,#f0b429,#c8861a);color:#080808;text-decoration:none;padding:0.9rem 2rem;font-weight:700;font-size:0.95rem;letter-spacing:1px;text-transform:uppercase;border-radius:2px;margin-right:0.8rem;margin-bottom:0.8rem}
+.btn2{display:inline-block;border:1px solid #333;color:#efefef;text-decoration:none;padding:0.9rem 2rem;font-weight:700;font-size:0.95rem;letter-spacing:1px;text-transform:uppercase;border-radius:2px;margin-bottom:0.8rem}
+.stats{display:flex;gap:2rem;margin-top:2.5rem;flex-wrap:wrap}
+.sn{font-family:Impact,Arial,sans-serif;font-size:2.2rem;color:#f0b429;line-height:1}
+.sl{font-size:0.7rem;color:#888;text-transform:uppercase;letter-spacing:1px;margin-top:0.2rem}
+.ticker{background:linear-gradient(90deg,#c8861a,#f0b429,#c8861a);padding:0.65rem 0;overflow:hidden}
+.ti{display:flex;gap:2.5rem;white-space:nowrap;width:max-content;animation:scroll 22s linear infinite}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.t{font-size:0.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#080808}
+.t::before{content:'✦';margin-right:0.6rem;font-size:0.5rem}
+section{padding:4rem 1.5rem;background:#080808}
+section.alt{background:#0e0e0e}
+.tag{font-size:0.7rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#f0b429;margin-bottom:0.4rem}
+h2{font-family:Impact,Arial,sans-serif;font-size:clamp(2rem,5vw,3rem);color:#fff;line-height:1;margin-bottom:0.8rem}
+.desc{color:#888;line-height:1.7;max-width:460px;margin-bottom:2rem}
+.pnote{background:rgba(240,180,41,0.07);border:1px solid rgba(240,180,41,0.2);border-radius:2px;padding:1rem 1.2rem;margin-bottom:2rem;font-size:0.85rem;color:#aaa;line-height:1.5}
+.pnote strong{color:#f0b429}
+.pnote a{color:#f0b429;text-decoration:none;font-weight:600}
+.grid{display:grid;grid-template-columns:1fr;gap:1px;background:#222;border:1px solid #222}
+@media(min-width:600px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{background:#131313;padding:2rem;position:relative;overflow:hidden}
+.card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#c8861a,#f0b429);transform:scaleX(0);transform-origin:left;transition:transform 0.3s}
+.card:hover{background:#1a1a1a}
+.card:hover::after{transform:scaleX(1)}
+.cn{font-family:Impact,Arial,sans-serif;font-size:3.5rem;color:rgba(240,180,41,0.07);line-height:1;margin-bottom:0.3rem}
+.ci{font-size:2rem;display:block;margin-bottom:0.6rem}
+.cname{font-weight:700;font-size:1.1rem;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:0.6rem}
+.cdesc{font-size:0.87rem;color:#888;line-height:1.6}
+.clist{list-style:none;margin-top:1rem}
+.clist li{font-size:0.8rem;color:#888;padding:0.3rem 0;border-bottom:1px solid #1e1e1e;display:flex;align-items:center;gap:0.5rem}
+.clist li::before{content:'✦';color:#c8861a;font-size:0.4rem;flex-shrink:0}
+.steps{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem}
+@media(min-width:600px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{text-align:center;padding:1.5rem 1rem}
+.snum{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#c8861a,#f0b429);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-family:Impact,Arial,sans-serif;font-size:1.3rem;color:#080808;box-shadow:0 0 18px rgba(240,180,41,0.25)}
+.sname{font-weight:700;font-size:0.9rem;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:0.4rem}
+.sdesc{font-size:0.8rem;color:#888;line-height:1.55}
+.zones{display:flex;flex-direction:column;gap:0.8rem;margin-top:1.5rem}
+.zone{display:flex;align-items:center;gap:1rem;padding:1rem 1.2rem;background:#131313;border:1px solid #252525;border-radius:2px}
+.zi{font-size:1.4rem}
+.zn{font-weight:700;font-size:1rem;letter-spacing:1px;text-transform:uppercase;color:#fff}
+.znote{font-size:0.78rem;color:#888;margin-top:0.1rem}
+.cbox{background:#131313;border:1px solid #252525;border-radius:2px;padding:3rem 1.5rem;text-align:center;position:relative;overflow:hidden}
+.cbox::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(240,180,41,0.09) 0%,transparent 65%);pointer-events:none}
+.bigphone{display:block;font-family:Impact,Arial,sans-serif;font-size:clamp(2rem,8vw,3.5rem);color:#f0b429;text-decoration:none;letter-spacing:3px;margin:0.8rem 0 0.3rem}
+.csub{font-size:0.85rem;color:#888;margin-bottom:1.5rem}
+.ccards{display:flex;flex-wrap:wrap;gap:0.8rem;justify-content:center;margin-top:1.5rem}
+.cc{background:rgba(240,180,41,0.07);border:1px solid rgba(240,180,41,0.18);border-radius:2px;padding:1rem 1.3rem;text-align:center;min-width:130px}
+.cci{font-size:1.3rem;display:block;margin-bottom:0.3rem}
+.ccl{font-size:0.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#888}
+.ccv{font-size:0.9rem;font-weight:700;color:#f0b429;margin-top:0.2rem}
+footer{background:#0a0a0a;border-top:1px solid #1e1e1e;padding:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.fc{font-size:0.75rem;color:#666}
+.fc span{color:#f0b429}
+footer a{color:#f0b429;text-decoration:none;font-weight:700;font-size:0.9rem}
+</style>
 </head>
-<body style="background:black; color:white; text-align:center; font-family:sans-serif;">
-
-  <h1>JM's Mobile Detailing</h1>
-  <p>Professional mobile car detailing at your doorstep</p>
-
-  <p>📞 Call now:</p>
-  <a href="tel:4074374887" style="color:lime; font-size:20px;">407-437-4887</a>
-
+<body>
+<nav>
+  <a href="#" class="logo">JM'S <span>DETAILING</span></a>
+  <a href="tel:4074374887" class="nav-phone">📞 407-437-4887</a>
+</nav>
+<section class="hero">
+  <div>
+    <div class="badge">● Mobile Detailing · We Come To You</div>
+    <h1>Your Car <span>Deserves</span><br>The Best</h1>
+    <p class="sub">Professional mobile detailing brought right to your driveway. No shop, no hassle — just a showroom shine wherever you are.</p>
+    <p class="loc">📍 Serving Orlando · Winter Park · Windermere & surrounding areas</p>
+    <a href="tel:4074374887" class="btn">📞 Call To Book</a>
+    <a href="#services" class="btn2">View Services</a>
+    <div class="stats">
+      <div><div class="sn">100%</div><div class="sl">Mobile Service</div></div>
+      <div><div class="sn">3</div><div class="sl">Core Services</div></div>
+      <div><div class="sn">FL</div><div class="sl">Central Florida</div></div>
+    </div>
+  </div>
+</section>
+<div class="ticker"><div class="ti">
+  <span class="t">Mobile Detailing</span><span class="t">We Come To You</span><span class="t">Interior Detailing</span><span class="t">Exterior Detailing</span><span class="t">Carpet Cleaning</span><span class="t">Orlando FL</span><span class="t">Winter Park</span><span class="t">Windermere</span><span class="t">Call 407-437-4887</span>
+  <span class="t">Mobile Detailing</span><span class="t">We Come To You</span><span class="t">Interior Detailing</span><span class="t">Exterior Detailing</span><span class="t">Carpet Cleaning</span><span class="t">Orlando FL</span><span class="t">Winter Park</span><span class="t">Windermere</span><span class="t">Call 407-437-4887</span>
+</div></div>
+<section class="alt" id="services">
+  <div class="tag">What We Offer</div>
+  <h2>Our Services</h2>
+  <p class="desc">Every service performed at your location. No drop-off needed.</p>
+  <div class="pnote"><strong>💰 Pricing Note —</strong> All prices are based on your vehicle's specific needs and condition. Call or text <a href="tel:4074374887">407-437-4887</a> for a free quote.</div>
+  <div class="grid">
+    <div class="card"><div class="cn">01</div><span class="ci">🚗</span><div class="cname">Exterior Detailing</div><p class="cdesc">Deep clean of your vehicle's exterior, restoring that showroom shine.</p><ul class="clist"><li>Full exterior hand wash</li><li>Wheel & tire cleaning</li><li>Streak-free windows</li><li>Door jambs wiped down</li><li>Exterior trim dressing</li></ul></div>
+    <div class="card"><div class="cn">02</div><span class="ci">✨</span><div class="cname">Interior Detailing</div><p class="cdesc">Thorough interior refresh — every surface cleaned and looking its best.</p><ul class="clist"><li>Full interior vacuum</li><li>Dashboard & console wipe-down</li><li>Seat treatment & conditioning</li><li>Door panels cleaned</li><li>Interior windows cleaned</li></ul></div>
+    <div class="card"><div class="cn">03</div><span class="ci">🧹</span><div class="cname">Carpet Cleaning</div><p class="cdesc">Stubborn stains and deep-set dirt are no match. Spotless floors guaranteed.</p><ul class="clist"><li>Deep carpet extraction</li><li>Stain treatment</li><li>Floor mat deep clean</li><li>Odor elimination</li><li>Trunk carpet included</li></ul></div>
+  </div>
+</section>
+<section id="how">
+  <div style="text-align:center"><div class="tag">Simple Process</div><h2>How It Works</h2></div>
+  <div class="steps">
+    <div class="step"><div class="snum">1</div><div class="sname">Call or Text</div><p class="sdesc">Reach out at 407-437-4887 to schedule at a time that works for you.</p></div>
+    <div class="step"><div class="snum">2</div><div class="sname">Pick a Service</div><p class="sdesc">Choose exterior, interior, carpet cleaning — or combine them all.</p></div>
+    <div class="step"><div class="snum">3</div><div class="sname">We Come To You</div><p class="sdesc">JM arrives at your location with all equipment ready to go.</p></div>
+    <div class="step"><div class="snum">4</div><div class="sname">Enjoy The Shine</div><p class="sdesc">Walk back to a spotless vehicle — no waiting, no hassle.</p></div>
+  </div>
+</section>
+<section class="alt" id="area">
+  <div class="tag">Where We Operate</div>
+  <h2>Service Area</h2>
+  <p class="desc">We come directly to you — your driveway, workplace, wherever is convenient.</p>
+  <div class="zones">
+    <div class="zone"><span class="zi">📍</span><div><div class="zn">Orlando</div><div class="znote">Full coverage across the Orlando metro area</div></div></div>
+    <div class="zone"><span class="zi">📍</span><div><div class="zn">Winter Park</div><div class="znote">Available 7 days a week</div></div></div>
+    <div class="zone"><span class="zi">📍</span><div><div class="zn">Windermere</div><div class="znote">Serving the Butler Chain & surrounding areas</div></div></div>
+    <div class="zone"><span class="zi">📍</span><div><div class="zn">Surrounding Areas</div><div class="znote">Call us to confirm your location</div></div></div>
+  </div>
+</section>
+<section id="contact">
+  <div class="cbox">
+    <div style="position:relative">
+      <div class="tag" style="text-align:center">Ready To Book?</div>
+      <h2 style="text-align:center">Let's Get Your Car<br><span style="color:#f0b429">Looking Its Best</span></h2>
+      <p style="color:#888;font-size:0.9rem;max-width:360px;margin:0.8rem auto 0;line-height:1.6">Call or text to schedule. We'll come to you anywhere in the Orlando area.</p>
+      <a href="tel:4074374887" class="bigphone">407-437-4887</a>
+      <p class="csub">Tap to call · or send a text</p>
+      <a href="tel:4074374887" class="btn">📞 Book My Detail Now</a>
+      <div class="ccards">
+        <div class="cc"><span class="cci">🚗</span><div class="ccl">Service</div><div class="ccv">Mobile — We Come To You</div></div>
+        <div class="cc"><span class="cci">📍</span><div class="ccl">Based In</div><div class="ccv">Orlando, FL</div></div>
+        <div class="cc"><span class="cci">📞</span><div class="ccl">Phone</div><div class="ccv">407-437-4887</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <span class="logo">JM'S <span style="color:#fff">DETAILING</span></span>
+  <p class="fc">© 2026 <span>JM's Detailing</span> · Orlando, FL</p>
+  <a href="tel:4074374887">407-437-4887</a>
+</footer>
 </body>
 </html>
